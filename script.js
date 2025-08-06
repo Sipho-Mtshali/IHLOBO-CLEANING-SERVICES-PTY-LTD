@@ -38,10 +38,18 @@
                 
                 // Base prices by service type
                 switch(serviceType) {
-                    case 'home': basePrice = 300; break;
-                    case 'office': basePrice = 450; break;
-                    case 'event': basePrice = 600; break;
-                    case 'deep': basePrice = 500; break;
+                    case 'home': 
+                    basePrice = 300; 
+                    break;
+                    case 'office': 
+                    basePrice = 700; 
+                    break;
+                    case 'event': 
+                    basePrice = 600; 
+                    break;
+                    case 'deep': 
+                    basePrice = 500; 
+                    break;
                 }
 
                 // Size multiplier
@@ -55,7 +63,7 @@
                 const frequencyDiscount = {
                     'once': 1,
                     'weekly': 0.8,
-                    'monthly': 0.9
+                    'monthly': 2.5
                 };
 
                 const finalPrice = Math.round(basePrice * sizeMultiplier[propertySize] * frequencyDiscount[frequency]);
