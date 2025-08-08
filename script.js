@@ -231,3 +231,24 @@
                 header.style.backdropFilter = 'none';
             }
         });
+        function filterGallery(category) {
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // Set active button
+  event.target.classList.add('active');
+
+  const items = document.querySelectorAll('.picture-item');
+  items.forEach(item => {
+    if (category === 'all' || item.dataset.category === category) {
+      item.style.display = 'block';
+      item.style.opacity = '1';
+      item.style.transform = 'none';
+      item.style.pointerEvents = 'auto';
+    } else {
+      item.style.display = 'none';
+      item.style.opacity = '0';
+      item.style.pointerEvents = 'none';
+    }
+  });
+}

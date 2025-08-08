@@ -774,3 +774,122 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Container and layout */
+.pictures-gallery {
+  background-color: #f8f9fa; /* Light background */
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #212529; /* Dark text */
+}
+
+.pictures-gallery .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #2c3e50; /* Dark Blue-ish */
+}
+
+.gallery-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555; /* Medium gray */
+}
+
+/* Tabs */
+.gallery-tabs {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  background-color: #3498db; /* Bright Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 8px 10px 8px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #2980b9; /* Darker Blue */
+}
+
+.tab-btn.active {
+  background-color: #2c3e50; /* Dark navy */
+}
+
+/* Grid */
+.pictures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Picture items */
+.picture-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.picture-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Picture placeholder content */
+.picture-placeholder {
+  padding: 25px;
+  text-align: center;
+}
+
+.picture-placeholder i {
+  font-size: 50px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.placeholder-text h4 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.placeholder-text p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Overlay icon (search-plus) */
+.picture-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #3498db;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+/* Fade-in class (simple opacity) */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Team photo special styling */
+.team-photo i {
+  color: #e67e22; /* Orange for team icons */
+}
